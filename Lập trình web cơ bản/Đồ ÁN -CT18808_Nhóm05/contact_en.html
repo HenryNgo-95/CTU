@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Có bán giày nè</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/fff06ecf43.js" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap & Jquery -->
+    <script src="./assets/bootstrap/js/bootstrap.js"></script>
+    <script src="./assets/jquery/jquery-3.6.1.min.js"></script>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+    
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Passion+One&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/success.css">
+</head>
+<body>
+    <!-- Preload effect -->
+    <div class="preload-bg w-100 h-100 bg-white"><div class="spinner"></div></div> 
+
+    <!-- Language select --> 
+    <div class="sticky-top float-end" style="z-index: 10000;">
+        <a class="language-icon lang-vi" href="contact.html"><img style="width: 40px;" src="./assets/img/vietnam.png"/></a>
+        <a class="language-icon lang-en" href="contact_en.html"><img style="width: 40px;" src="./assets/img/britain.png"/></a>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav class="navbar sticky-top shadow navbar-expand-md bg-light d-block p-0">
+        <div class="topnav container-fluid row justify-content-center ms-0 py-3" style="transition: .4s ease;">
+            <a class="navbar-brand d-block col-12 col-md-2 text-center" href="index.html"><img style="width: 200px;" src="./assets/img/logo.png" alt="" srcset=""></a>
+            <button class="navbar-toggler d-block d-md-none col-1 lh-base bg-transparent text-center" style="border: none!important;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon" style="transform: translateX(-2px);"><i class="fa-solid fa-bars"></i></span>
+            </button>
+            <form class="d-flex col-7 ps-0 justify-content-end" role="search">
+                <input class="form-control me-2 rounded-pill searchbar" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn rounded-circle" type="submit" style="width: 38px; background-color: #ef3f1d;"><i class="fa-solid fa-magnifying-glass text-light" style="font-size: 1rem; transform: translateX(-2px);"></i></button>
+            </form>
+            <a class="col-1 text-center ps-0 ps-md-3 me-3 me-md-0" href="cart.html">
+                <button class="btn position-relative" type="submit"><i class="fa-solid fa-basket-shopping"></i>
+                    <div class="rounded-pill position-absolute" style="height: 15px; top: 2px; right: 2px; padding: 0 0.3rem; background-color: #ef3f1d;">
+                        <p class="cartItems fw-bold text-light" style="font-size: 0.7rem; transform: translateY(-1px);">0</p>
+                    </div>
+                </button>
+            </a>
+            <a id="signinlink" class="col-1 text-center ps-0 me-3 me-md-0" type="button" data-bs-toggle="modal" data-bs-target="#singnup-login-modal">
+                <button class="btn" type="submit"><i class="fa-solid fa-user"></i></button>
+            </a>
+        </div>
+        <div class="container-fluid p-0">
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">MENU</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body" style="background-color: #ffd643; height: 40px;">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item active" ><a href="index.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#website-unavailable">Introduction</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="dropdownMenuLink" href="product.html">Products</a>               
+                            <ul class="dropdown-menu shadow p-0 mb-2 rounded-0" aria-labelledby="dropdownMenuLink">
+                                <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollNewProducts">New products</a></li>
+                                <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForMen">Men</a></li>
+                                <li><a class="dropdown-item py-2 fw-bold" href="product.html#scrollForWomen">Women</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#website-unavailable">Blog</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="website-unavailable" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="width: 500px!important; max-width: 50%;">
+            <div class="modal-content border-0" style="border-radius: 1rem;">
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0  text-center">
+                    <p class="text-center fw-bolder">This page is under complement. </br>Wish you sympathize.</p>
+                    <img class="w-50 mb-4 rounded-circle" src="./assets/img/ninosadface.jpg" alt="" srcset="">
+                    <p class="text-center mb-0 fw-bold website-available">Currently, the following pages is ready:</p>
+                    <p class="website-available px-5">Home page, products page, contact page, cart and sign in/log in popup.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="singnup-login-modal" tabindex="-1" aria-labelledby="singnup-login-modal-Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="container signup-login" id="signup-login container">
+                    <div class="form-container sign-up-container">
+                        <form action="#" style="width: 100%; transform: translateX(5px);">
+                            <h1 class="fw-bolder">Create account</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>Use your email</span>
+                            <input type="text" placeholder="User name" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Create</button>
+                        </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                        <form action="#" style="width: 50%; transform: translateX(-12px)">
+                            <h1 class="fw-bolder">Login</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>Use your email</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <span class="mb-2"><a href="#">Forget password?</a></span>
+                            <button>Log in</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1 class="fw-bold">Used to come here?</h1>
+                                <p>Log in to join with us</p>
+                                <button class="ghost bg-dark border-0" id="signIn">Log in</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1 class="fw-bold">Welcome!</h1>
+                                <p>Is this the first time you come here? Create an account</p>
+                                <button class="ghost bg-dark border-0" id="signUp">Sign up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="contact-container pb-4">
+        <h1 class="contact-header text-uppercase fw-bolder text-center py-5" style="background-image: url(./assets/img/contact.jpg); background-size: cover;">
+            Contact us
+        </h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="modal-popup d-none" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+            Launch demo modal
+        </button>
+    
+        <!-- Success modal -->
+        <div class="modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" style="width: 400px!important; max-width: 50%;">
+                <div class="modal-content border-0" style="border-radius: 1rem;">
+                    <div class="modal-body pt-5">
+                        <div class="success-checkmark">
+                            <div class="check-icon">
+                                <span class="icon-line line-tip"></span>
+                                <span class="icon-line line-long"></span>
+                                <div class="icon-circle"></div>
+                                <div class="icon-fix"></div>
+                            </div>
+                        </div>
+                        <p class="text-center">Your message has been received.</br>Going to home page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row m-auto pt-4" style="max-width: 600px;">
+            <form action="#" onsubmit="clickSuccessModal(); return false;">
+                <div class="mb-3">
+                    <label for="" class="form-label ps-2">Name</label>
+                    <input type="text" class="form-control" aria-describedby="helpId" minlength="2" required placeholder="Nino Nakano">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label ps-2">Email</label>
+                    <input type="email" class="form-control" required aria-describedby="emailHelpId" placeholder="ninonakano@animail.com">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label ps-2">Phone number</label>
+                    <input type="text" class="form-control" minlength="6" required id="" aria-describedby="helpId" placeholder="0969696969">
+                </div>
+                <div class="mb-3">
+                    <label for="" class="form-label ps-2">Message</label>
+                    <textarea class="form-control" minlength="10" required rows="5"></textarea>
+                </div>
+                <button type="submit" class="btn rounded-pill fw-bold" style="background-color: #ffd643;">Send</button>
+            </form>
+        </div>
+    </div>
+
+    <button class="rounded-circle scroll-to-top position-fixed border-0" onclick="scrollToTop();" style="width: 55px; height: 55px; bottom: 3%;">
+        <i class="fa-solid fa-chevron-right text-light"></i>
+    </button>
+
+    <footer class="bg-dark text-center text-white" id="scrollContact">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <!-- Twitter -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <!-- Google -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-google"></i>
+                </a>
+                <!-- Instagram -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <!-- Linkedin -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <!-- Github -->
+                <a class="btn btn-floating m-1" style="background-color: #ffd643;" href="#!" role="button">
+                    <i class="fab fa-github"></i>
+                </a>
+            </section>
+            
+            <!-- Section: Form -->
+            <section class="">
+                <form action="">
+                    <!--Grid row-->
+                    <div class="row d-flex justify-content-center">
+                        <div class="col-auto">
+                            <p class="pt-2">
+                                <strong>Subscribe for newest information</strong>
+                            </p>
+                        </div>
+                        <div class="col-md-5 col-12">
+                            <!-- Email input -->
+                            <div class="form-outline form-white mb-4">
+                                <input type="email" id="form5Example21" class="form-control rounded-pill email-input" placeholder="Email" />
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <!-- Submit button -->
+                            <button type="submit" class="btn rounded-pill btn-outline-light mb-2 email-input-submit">
+                                Subscribe
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <!-- Section: Links -->
+            <section class="mb-4">
+                <!--Grid row-->
+                <div class="row">
+                    <div class="col">
+                        <h5 class="text-uppercase contacting-ways mt-4">Address</h5>
+                        <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">
+                                <i class="bi bi-shop"></i>
+                                Zone II, 30/4 street, Hung Loi, Ninh Kieu, Can Tho
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">
+                                <i class="bi bi-shop"></i>
+                                Zone II, 3/2 street, Xuan Khanh, Ninh Kieu, Can Tho
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-uppercase contacting-ways mt-4">Hotline</h5>            
+                        <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">
+                                <i class="bi bi-telephone"></i>
+                                0123456789
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">
+                                <i class="bi bi-telephone"></i>
+                                0987654321
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="text-uppercase contacting-ways mt-4">Email</h5>
+                        <ul class="list-unstyled mb-0">
+                        <li>
+                            <a href="#!" class="text-white">
+                            <i class="bi bi-envelope"></i>
+                                Onlyshoes1@gmail.com
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#!" class="text-white">
+                                <i class="bi bi-envelope"></i>
+                                Onlyshoes2@gmail.com
+                            </a>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center fw-bold text-dark p-3" style="background-color: #ffd643;">
+            © 2022 Copyright:
+            <a class="text-dark fw-bold" href="http://127.0.0.1:5500/index.html?#!">Onlyshoesshop.com</a>
+        </div>
+    </footer>
+    <script src="./assets/js/itemsList.js"></script>
+    <script src="./assets/js/scripts.js"></script>
+</body>
+</html>
