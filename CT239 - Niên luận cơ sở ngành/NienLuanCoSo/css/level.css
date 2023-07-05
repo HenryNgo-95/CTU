@@ -1,0 +1,176 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    background-color: #f8f9fd;
+    background-image: url('/NienLuanCoSo/img/table.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Phần đàu heading trang web navigation */
+
+.nav {
+    height: 48px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #8d448b;
+}
+
+.nav .box_bt{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box_bt li {
+    cursor: pointer;
+    width: 150px;
+    height: 48px;
+    color: #fff;
+    font-size: 20px;
+    border-left: 4px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #000;
+    line-height: 48px;
+    text-align: center;
+}
+
+.box_bt li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.link__home {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Bài tập */
+.box_exam {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.box_exam li {
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+.box_exam li a{
+    display: block;
+    width: 100%;
+    color: #000;
+    text-decoration: none;
+}
+
+.box_exam li:hover {
+    display: block;
+    background-color: #ccc;
+}
+
+.li_exam:hover .box_exam{
+    display: block;
+}
+
+/* avatar */
+.box_user {
+    padding: 0;
+    display: none;
+    list-style-type: none;
+}
+
+.box_user li{
+    background-color: #fff;
+    border: none;
+}
+
+.btn-dx {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.li-user:hover .box_user {
+    display: block;
+    background-color: #ccc;
+}
+
+.btn-dx:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* body */
+
+.box__content {
+    position: absolute;
+    left: 34%;
+    margin-top: 14%;
+}
+
+.layout-1 {
+    display: flex;
+    width: 488px;
+    justify-content: space-between;
+}
+
+.level {
+    width: 100px;
+    background-color: #72ca62;
+}
+
+.level a {
+    color: #000;
+    text-decoration: none;
+}
+
+.level p {
+    position: relative;
+    padding: 12px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.hinh_vuong {
+    position: absolute;
+    border: 21px solid;
+    left: 100%;
+    top: 0;
+    border-color: transparent transparent transparent #fff;
+}
+
+.level-2 {
+    display: flex;
+    justify-content: space-around;
+    width: 220px;
+    height: 44px;
+    border: 1px solid #000;
+    background-color: #fff;
+    margin-top: 14px;
+}
+
+.level-2 p {
+    font-size: 16px;
+    font-weight: 500;
+}

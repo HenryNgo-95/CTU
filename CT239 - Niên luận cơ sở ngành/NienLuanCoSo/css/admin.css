@@ -1,0 +1,148 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f9fd;
+}
+
+/* Phần đàu heading trang web navigation */
+
+.nav {
+    height: 48px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #8d448b;
+}
+
+.nav .box_bt{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.box_bt li {
+    cursor: pointer;
+    width: 150px;
+    height: 48px;
+    color: #fff;
+    font-size: 20px;
+    border-left: 4px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color: #000;
+    line-height: 48px;
+    text-align: center;
+}
+
+.box_bt li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.link__home {
+    display: block;
+    width: 100%;
+    padding: 14px 0;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Bài tập */
+.box_exam {
+    display: none;
+    list-style-type: none;
+    padding: 0;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.box_exam li {
+    color: #000;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: #fff;
+}
+
+.box_exam li a{
+    display: block;
+    width: 100%;
+    color: #000;
+    text-decoration: none;
+}
+
+.box_exam li:hover {
+    display: block;
+    background-color: #ccc;
+}
+
+.li_exam:hover .box_exam{
+    display: block;
+}
+
+/* avatar */
+.box_user {
+    padding: 0;
+    display: none;
+}
+
+.box_user li{
+    background-color: #fff;
+    border: none;
+}
+
+.btn-dx {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.li-user:hover .box_user {
+    display: block;
+    background-color: #ccc;
+}
+
+.btn-dx:hover {
+    cursor: pointer;
+    background-color: #fff;
+}
+
+/* Phần thân body trang chủ */
+
+.box__container {
+    width: 97%;
+    margin: 48px 32px;  
+}
+
+.box__4-item {
+    margin-top: 10%;
+}
+
+.title__p {
+    width: 90%;
+}
+
+.box__item-1 {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.item-1 {
+    width: 25%;
+}
+
+.item-1 video {
+    width: 80%;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid #000;
+}

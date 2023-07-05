@@ -1,0 +1,271 @@
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-image: url("/NienLuanCoSo/img/6513849.jpg");
+}
+
+/* Phần đàu heading trang web navigation */
+
+.nav {
+  height: 48px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #8d448b;
+}
+
+.nav .box_bt {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.box_bt li {
+  cursor: pointer;
+  width: 150px;
+  height: 48px;
+  color: #fff;
+  font-size: 20px;
+  border-left: 4px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #000;
+  line-height: 48px;
+  text-align: center;
+}
+
+.box_bt li:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Bài tập */
+.box_exam {
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.box_exam li {
+  color: #000;
+  border: none;
+  border-bottom: 1px solid #000;
+  background-color: #fff;
+}
+
+.box_exam li a {
+  display: block;
+  width: 100%;
+  color: #000;
+  text-decoration: none;
+}
+
+.box_exam li:hover {
+  display: block;
+  background-color: #ccc;
+}
+
+.link__home {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  color: #fff;
+  text-decoration: none;
+}
+
+.li_exam:hover .box_exam {
+  display: block;
+}
+
+/* avatar */
+.box_user {
+  padding: 0;
+  display: none;
+}
+
+.box_user li {
+  background-color: #fff;
+  border: none;
+}
+
+.btn-dx {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.6);
+}
+
+.li-user:hover .box_user {
+  display: block;
+  background-color: #ccc;
+}
+
+.btn-dx:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* Form bài tập dấu cộng 1 chữ số*/
+.box_container {
+  text-align: center;
+  margin: 70px 20%;
+}
+
+.box__flex {
+  display: flex;
+  margin: 18% 0 7% 0;
+  justify-content: space-between;
+}
+
+.number-1,
+.number-2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #4ea0a0;
+}
+
+.number-1 h1,
+.number-2 h1 {
+  color: #fff;
+}
+
+.number-1:hover,
+.number-2:hover {
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: rgba(66, 148, 180, 0.616);
+}
+
+input {
+  width: 80px;
+  height: 40px;
+  margin-top: 2%;
+  border: 1px solid #000;
+  background-color: #4ea0a0;
+}
+
+#result-container {
+  font-size: 20px;
+}
+
+/* Button nộp bài */
+.btn_dele,
+.btn_continue,
+.btn_check {
+  width: 228px;
+  padding: 10px;
+  color: #fff;
+  margin-top: 8%;
+  border-radius: 4px;
+  border: 1px solid #000;
+  background-color: #8d448b;
+}
+
+.btn_dele:hover,
+.btn_continue:hover,
+.btn_check:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.705);
+}
+
+/* CSS hiệu ứng */
+
+/* Nút số 1 */
+.animate-left {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slide-in-left 2s forwards;
+}
+
+@keyframes slide-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Nút số 2 */
+.animate-top {
+  opacity: 0;
+  transform: translateY(-100%);
+  animation: fall-in 1s forwards;
+}
+
+@keyframes fall-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* tag input */
+.animate-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slide-in-right 1s forwards;
+}
+
+@keyframes slide-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+/* Nút chuyển đến level 2 */
+.arrow_left {
+  position: relative;
+  right: 30%;
+  width: 80px;
+  height: 80px;
+  float: left;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.arrow_left:hover {
+  border: 1px solid #000;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.arrow_left a {
+  margin: 0;
+  color: blue;
+  padding: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 80px;
+  text-decoration: none;
+}
